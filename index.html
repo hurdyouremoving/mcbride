@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #FFFFFF;
@@ -18,7 +18,7 @@
     --brass-deep: #8A6F3E;
     --panel: #FFFFFF;
     --focus: #161513;
-    --font-display: "Cormorant Garamond", Georgia, serif;
+    --font-display: "Tenor Sans", "Inter", sans-serif;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   }
   :root:not([data-theme="light"]) {
@@ -65,12 +65,15 @@
   button, input, select, textarea { font-family: var(--font-body); }
   :focus-visible { outline: 2px solid var(--brass-deep); outline-offset: 3px; }
 
-  /* NAV — transparent overlay on top of the hero photo */
+  /* NAV — transparent overlay with a soft fade, on top of the hero photo */
   .nav {
-    position: absolute; top: 0; left: 0; right: 0; z-index: 30;
-    background: transparent;
+    position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100%;
+    z-index: 30; margin: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.22) 45%, rgba(0,0,0,0) 100%) !important;
+    pointer-events: none;
   }
-  .nav-inner { display: flex; align-items: center; justify-content: center; padding: 30px 0; }
+  .nav-inner { display: flex; align-items: center; justify-content: center; padding: 30px 0; pointer-events: auto; }
   .nav-cta {
     border: 1px solid rgba(255,255,255,0.8); padding: 10px 24px; font-size: 0.8rem;
     text-decoration: none; white-space: nowrap; transition: background .2s, color .2s;
