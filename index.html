@@ -46,5 +46,6 @@
       const modal=document.getElementById('modal'),modalImage=document.getElementById('modalImage'),cards=[...document.querySelectorAll('.gallery-card img')];function show(image){modalImage.src=image.src;modalImage.alt=image.alt;modal.classList.add('show')}cards.forEach(img=>img.addEventListener('click',()=>show(img)));document.getElementById('galleryButton').addEventListener('click',()=>show(cards[0]));document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('show'));modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});
       document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();e.currentTarget.reset();document.getElementById('formNote').style.display='block'});const videoModal=document.getElementById('videoModal'),propertyVideo=document.getElementById('propertyVideo');document.getElementById('openVideo').addEventListener('click',()=>{propertyVideo.src='https://www.youtube.com/embed/0I_HyNNDLKU?autoplay=1';videoModal.classList.add('show')});function closeVideo(){videoModal.classList.remove('show');propertyVideo.src=''}document.getElementById('closeVideo').addEventListener('click',closeVideo);videoModal.addEventListener('click',e=>{if(e.target===videoModal)closeVideo()});
     </script>
+  <!-- Deployment refresh -->
   </body>
 </html>
